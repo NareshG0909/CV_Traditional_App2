@@ -14,7 +14,7 @@ label_map = {0: 'cardboard', 1: 'glass', 2: 'metal', 3: 'paper', 4: 'plastic', 5
 @st.cache_resource
 def load_model(classifier_choice):
     model_path = os.path.join("model", f"{classifier_choice}_model.pkl")
-    scaler_path = os.path.join("model", r"model/scaler.pkl")
+    scaler_path = os.path.join("model", r"scaler.pkl")
     model = joblib.load(model_path)
     scaler = joblib.load(scaler_path)
     return model, scaler
